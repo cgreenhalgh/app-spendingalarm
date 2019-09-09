@@ -1,0 +1,39 @@
+{
+    "manifest-version": 1,
+    "name": "app-spendingalarm",
+    "version": "0.2.0",
+    "description": "databox app to report configurable spending alaram",
+    "author": "Chris Greenhalgh, The University of Nottingham",
+    "licence": "MIT",
+    "databox-type": "app",
+    "tags": [
+    ],
+    "homepage": "https://github.com/cgreenhalgh/app-spendingalarm",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cgreenhalgh/app-spendingalarm.git"
+    },
+    "datasources": [
+	{
+		"type": "truelayerUserTransactions",
+		"required": true,
+		"name": "transactions",
+		"clientid": "TRANSACTIONS",
+		"granularities": []
+	},
+	{
+		"type": "spendingalarmReports",
+		"required": true,
+		"clientid": "REPORTS",
+		"actuator": true
+	},
+    ],
+    "network-permissions": [],
+    "resource-requirements": {},
+    "export-whitelist": [],
+    "external-whitelist": [],
+    "resource-requirements": {
+        "store": "core-store"
+    },
+    "provides": []
+}
